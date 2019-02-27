@@ -20,38 +20,39 @@ public class UserDAO
 
 	public boolean isUser(User user) throws SQLException
 	{
-		try {
-
-			String query="select * from userRegistration where 	mail=? password=? ";
-			Connection con=ConnectionFactory.getConnection();
-			System.out.println("estab");
-			PreparedStatement pst=con.prepareStatement(query);
-				      
-					  pst.setString(1, user.getMail());
-					  pst.setString(2, user.getPassword());
-					
-					  pst.executeUpdate();
-					  
-					  ResultSet results = pst.executeQuery(query);
-			            while (results.next()) 
-			            {
-			            
-			               return true;
-			            }
-		         }
-			     catch(Exception e)
-			            {
-			            	e.printStackTrace();
-			            }
-		
-		
-						return false;
-	
+		 Connection con=ConnectionFactory.getConnection();
+		  Statement s=con.createStatement();
+		  String sql="Select email,password from userRegistration ";
+		  ResultSet rs=s.executeQuery(sql);
+		  while(rs.next())
+		  {
+			  String dname=rs.getString("email");
+			  String dpwd=rs.getString("password");
+			  if(user.getMail().equals(dname)&&user.getPassword().equals(dpwd))
+			  {
+				  return true;
+			  }
+		  }
+		return false;
+      
 	}
+	
+	
+	
+	
+	/*public boolean insert(User user) throws SQLException {
+		String query="insert into userRegistration values(?,?)";
+		Connection conn =ConnectionFactory.getConnection();
+		PreparedStatement pStatement= conn.prepareStatement(query);
+		pStatement.setString(1, user.getMail());
+		pStatement.setString(2, user.getPassword());
+		
+		return true;
+	}*/
 	
 	/*public static void main(String args[]) throws SQLException
 	{
-		boolean b=new UserDAO().isUser(new User("mirza@gmail.com","ok"));
+		boolean b=new UserDAO().insert(new User("mirza11@gmail.com","ok"));
 		System.out.println(b);
 	}*/
 }

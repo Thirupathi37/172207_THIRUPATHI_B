@@ -51,10 +51,10 @@ public class Validation extends HttpServlet
 		}
     	  if(status) {
     		 
-    		  RequestDispatcher DR=request.getRequestDispatcher("Azaan.html");
+    		response.sendRedirect("Comment.html");
     	  }
     	  else {
-    		  RequestDispatcher DR=request.getRequestDispatcher("SignUp.html");
+    		  response.sendRedirect("SignUp.html");
     	  }
 		
 		
