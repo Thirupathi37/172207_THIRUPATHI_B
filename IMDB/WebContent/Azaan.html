@@ -49,23 +49,24 @@ label.star:before {
 <body>
 <div class="container">
   <div class="jumbotron">
-   <div class = "page-header"><h2>WELCOME</h2></div>
- <div class="row">
- <div class="col-sm-6" style="background-color:lavender;">
+     <div class = "page-header"><h2>WELCOME</h2></div>
+       <div class="row">
+             <div class="col-sm-6" style="background-color:lavender;">
 
-<iframe width="400" height="440" src="https://www.youtube.com/embed/SkaM8NBVAu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe></div>
+                 <iframe width="400" height="440" src="https://www.youtube.com/embed/SkaM8NBVAu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                  </iframe>
+             </div>
 
  <div class="col-sm-6" style="background-color:lavender;"><h3><b> Movie:Azaan</b></h3>
- <pre><h5><b><p class="text-primary">DERECTOR:</b></p></h5>Prashant Chadha
- <h5><b><p class="text-primary">HERO:</b></p></h5> Sachiin J Joshi
-<h5><b> <p class="text-primary">HEROINE:</b></p></h5>Candice Boucher
- <h5><b> <p class="text-primary">MUSIC DERECTOR:</b></p></h5>Salim–Sulaiman(Indian Composer)
-
- </pre></div>
+       <pre><h5><b><p class="text-primary">DERECTOR:</b></p></h5>Prashant Chadha
+             <h5><b><p class="text-primary">HERO:</b></p></h5> Sachiin J Joshi
+            <h5><b> <p class="text-primary">HEROINE:</b></p></h5>Candice Boucher
+             <h5><b> <p class="text-primary">MUSIC DERECTOR:</b></p></h5>Salim–Sulaiman(Indian Composer)
+         </pre>
+ </div>
  <div>
-  <div class="stars">
-  <form action="">
+    <div class="stars">
+      <form action="">
 
     <input class="star star-5" id="star-5" type="radio" name="star"/>
 
@@ -89,24 +90,26 @@ label.star:before {
 
   </form>
 
-</div>
-  	
- 
- </div>
   </div>
+ </div>
+
  
  
   <p><i><b><u>COMMENT BELOW::</u></b></i></p>
-  <div class="container">
-  <div class="jumbotron">
- <form action="ValidationPath"  method="post">
-  <div class="form-group">
   
-   
+  
+<div class="container">
+  <div class="jumbotron">
+     <form action="ValidationPath"  method="post">
+       <div class="form-group">
+        
+        
+         <!--   <h3>Comments :</h3>
+			    <textarea rows="4" cols="50" name="comment"></textarea>  -->
+			    
+			    <label for="comment" class="required"><h3>Write  Comment Here</h3></label>
  
- 
-  <label for="comment" class="required"><h3>Enter Your Comment Here</h3></label>
-  <input type="text"  data-toggle="modal" data-target="#myModal"></input>
+  <input type="text"  data-toggle="modal" data-target="#myModal"></input> 
   
  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -116,18 +119,16 @@ label.star:before {
         <div class="modal-header">
            <div class="form-group">
   <p>Please Login First</p>
+<form action="ValidationPath" method="post">
     <label for="email" class="required">Email address:</label>
     <input type="email" class="form-control"  placeholder="Enter your mail here" name="email"  class="required">
     
    <label for="pwd" class="required">Password:</label>
     <input type="password" class="form-control"  placeholder="Enter your password here"  name="pwd"  class="required">
     <input type ="submit" value="submit">
+    </form>
         </div>
       </div>
- 
- 
- 
- 
  
  
 </body>

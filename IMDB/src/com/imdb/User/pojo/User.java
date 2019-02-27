@@ -1,9 +1,14 @@
-package com.imdb.pojo;
+package com.imdb.User.pojo;
 
 public class User 
 {
     String mail;
     String password;
+    
+    public User()
+    {
+    	
+    }
 	public User(String mail, String password) {
 		super();
 		this.mail = mail;

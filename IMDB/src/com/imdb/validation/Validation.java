@@ -2,46 +2,95 @@ package com.imdb.validation;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Validation
- */
+import com.User.DAO.UserDAO;
+import com.imdb.User.pojo.User;
+import com.java.ValidationDAO.ValidationDAO;
+
+
 @WebServlet(description = "CredentialsValidation", urlPatterns = { "/ValidationPath" })
-public class Validation extends HttpServlet {
+public class Validation extends HttpServlet 
+{
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Validation() {
+   
+    public Validation()
+    {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request, response);
 	}
+	
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out=response.getWriter();
-		String mail=request.getParameter("email");
-		String pwd=request.getParameter("pwd");
-		//if(username.equals(arg0))
-	out.println(pwd);	
-	response.sendRedirect("Azaan.html");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		//response.getWriter().print("redirect main   ");
+		User user=new User(request.getParameter("email"),request.getParameter("password"));
+		UserDAO logindao=new UserDAO();
+ 	//response.getWriter().print("redirect try");
+    	  boolean status =false;
+		try {
+			status = logindao.isUser(user);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			PrintWriter out=response.getWriter();
+		}
+    	  if(status) {
+    		 
+    		  RequestDispatcher DR=request.getRequestDispatcher("Azaan.html");
+    	  }
+    	  else {
+    		  RequestDispatcher DR=request.getRequestDispatcher("SignUp.html");
+    	  }
+		
+		
+		/*String username=request.getParameter("email");
+		String password=request.getParameter("pwd");
+		
+		User user=new User(username, password);
+		
+		UserDAO u=new UserDAO();
+		
+		 boolean status=false;
+		 
+	     try 
+	     {
+			status=u.isUser(user);
+		} 
+	     catch (SQLException e) 
+	     {
+			e.printStackTrace();
+	    }
+	     response.getWriter().print(status);
+		//System.out.println(status);
+		 PrintWriter out=response.getWriter();
+		if(status==true)
+		{
+			
+			response.sendRedirect("Azaan.html");
+			
+		}
+		else
+		{
+			response.sendRedirect("SignUp.html");
+		}*/
+		
+		
+		
+		
 	}
-
 }
