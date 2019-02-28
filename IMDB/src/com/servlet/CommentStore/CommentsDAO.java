@@ -10,7 +10,7 @@ public class CommentsDAO
 {
 
 	
-	public void  insert(CommentPOJO comm) throws SQLException
+	public void  insertComments(CommentPOJO comm) throws SQLException
 	{
 		String query="insert into Comments values(?)";
 		Connection conn =ConnectionFactory.getConnection();
@@ -19,9 +19,13 @@ public class CommentsDAO
 	     pStatement.executeUpdate();
 		
 	}	
-	public static void main(String args[]) throws SQLException
+	
+	
+
+	
+/*	public static void main(String args[]) throws SQLException
 	{
 		CommentsDAO o=new CommentsDAO();
-		o.insert(new CommentPOJO("thiru"));
-	}
+		o.insertComments(new CommentPOJO("thirupathi"));
+	}*/
 }

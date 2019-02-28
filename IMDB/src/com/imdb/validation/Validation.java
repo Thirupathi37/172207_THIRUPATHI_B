@@ -37,26 +37,27 @@ public class Validation extends HttpServlet
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		//response.getWriter().print("redirect main   ");
+		PrintWriter out=response.getWriter();
 		User user=new User(request.getParameter("email"),request.getParameter("password"));
-		UserDAO logindao=new UserDAO();
- 	//response.getWriter().print("redirect try");
+		UserDAO userdao=new UserDAO();
+ 	
     	  boolean status =false;
 		try {
-			status = logindao.isUser(user);
+			status = userdao.isUser(user);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			PrintWriter out=response.getWriter();
+			
 		}
     	  if(status) {
     		 
     		response.sendRedirect("Comment.html");
     	  }
-    	  else {
-    		  response.sendRedirect("SignUp.html");
+    	  else
+    	  {
+    		  response.sendRedirect("Azaan.html");
     	  }
-		
+    	 
 		
 		/*String username=request.getParameter("email");
 		String password=request.getParameter("pwd");

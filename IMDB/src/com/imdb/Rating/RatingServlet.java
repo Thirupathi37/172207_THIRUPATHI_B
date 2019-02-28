@@ -1,4 +1,4 @@
-package com.servlet.CommentStore;
+package com.imdb.Rating;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,17 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.servlet.CommentStore.CommentPOJO;
+import com.servlet.CommentStore.CommentsDAO;
+
 /**
- * Servlet implementation class CommentStore
+ * Servlet implementation class RatingServlet
  */
-@WebServlet("/CommentStorePath")
-public class CommentStore extends HttpServlet {
+@WebServlet(description = "RatingDesc", urlPatterns = { "/RatingServletPath" })
+public class RatingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CommentStore() {
+    public RatingServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,16 +41,15 @@ public class CommentStore extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		try {
-						new CommentsDAO().insertComments(new CommentPOJO(request.getParameter("comment")));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
+		try 
+		{
+			new RatingDAO().insertRating(new RatingPojo(request.getParameter("rating")));
+			System.out.println(request.getParameter("rating"));
+         }
+		catch (SQLException e) 
+		{
+             e.printStackTrace();
+         }
 	}
 
-
-	
-	
 }
