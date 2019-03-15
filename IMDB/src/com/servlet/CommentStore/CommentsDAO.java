@@ -7,8 +7,7 @@ import com.java.connection.ConnectionFactory;
 import java.sql.Connection;
 
 public class CommentsDAO
-{
-
+{	
 	
 	public void  insertComments(CommentPOJO comm) throws SQLException
 	{
@@ -16,8 +15,7 @@ public class CommentsDAO
 		Connection conn =ConnectionFactory.getConnection();
 		PreparedStatement pStatement= conn.prepareStatement(query);
 		pStatement.setString(1, comm.getComment());
-	     pStatement.executeUpdate();
-		
+	    pStatement.executeUpdate();
 	}	
 	
 	

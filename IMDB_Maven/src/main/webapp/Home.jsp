@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  h1{
+  background-color: yellow;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+  
+  <h1 style="background-color:light-blue"><b>WELCOME TO INDIAN MOVIES</b></h1>
+  </div>
+  <form action="SignUp.jsp" method="">
+   <a href="SignUp.html"> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Register Here</button></a></form>
+  <div class = "page-header">
+  <div class="row">
+   <a href="Azaan.jsp"><div class="col-sm-3" style="background-color:lavender;"> <img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Azaan.jpg" /></a></div>
+   <a href="Rustom.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Rustom.jpg"/></a></div>
+  <a href="Raaz2018.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Raaz.jpg"/></a></div>
+   <a href="VaiGai.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Vaigai.jpg"/></a></div>
+  
+  </div> </div>
+  
+  <div class = "page-header">
+  <div class="row">
+    <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavender;"> <img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Anu.jpg" /></a></div>
+    <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Boxer.jpg"/></a></div>
+   <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Dhanda.jpg"/></a></div>
+   <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Ekka.jpg"/></a></div>
+  </div> </div>
+  
+  <div class = "page-header">
+  <div class="row">
+   <a href="Azaan.html"> <div class="col-sm-3" style="background-color:lavender;"> <img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\3-idiots.jpg" /></a></div>
+    <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Bang_bang.jpg"/></a></div>
+  <a href="Azaan.html"> <div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\India_On_Mission.jpg"/></a></div>
+   <a href="Azaan.html"><div class="col-sm-3" style="background-color:lavenderblush;"><img class="img-responsive" src="C:\Users\tbommish\Desktop\IMDB\images\Romeo.jpg"/></a></div>
+  </div> </div>
+</div>
+
+ 
+</div>
+<footer>
+<p>sfsfsfsdfsdf</p>
+
+</footer>
+</body>
+
+</html>

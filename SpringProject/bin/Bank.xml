@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="cust" class="com.spring.Address.Customer">
+<property name="customerId" value="1234"></property>
+<property name="customerName" value="Thiru"></property>
+<property name="customerContact" value="8790120632"></property>
+<property name="customerAddress" ref="address"></property>
+</bean>
+
+<bean id="address" class="com.spring.Address.Address">
+<property name="street" value="Aravind Nagar"></property>
+<property name="city" value="Jagtial"></property>
+<property name="state" value="Telangana"></property>
+<property name="zip" value="505327"></property>
+<property name="country" value="India"></property>
+</bean>
+
+
+</beans>

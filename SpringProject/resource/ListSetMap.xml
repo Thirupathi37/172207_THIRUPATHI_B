@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="question1" class=" com.spring.QueAns.Question">
+<property name="questionId" value="1"></property>
+<property name="question" value="How are you?"></property>
+<property name="answers" value="I am Fine"></property>
+</bean>
+
+<bean id="question2" class=" com.spring.QueAns.Question">
+<property name="questionId" value="2"></property>
+<property name="question" value="Who are you?"></property>
+<property name="answers" value="I am Thirupathi"></property>
+</bean>
+<!-- ==========================================LIST=========================================== -->
+<bean id="listbean" class="com.spring.QueAns.ListAns">
+   <property name="answer">
+     <list>
+          <ref bean="question1"></ref>
+          <ref bean="question2"></ref>
+    </list>
+   </property>
+</bean>
+
+<!-- ==========================================SET=========================================== -->
+
+<bean id="setbean" class="com.spring.QueAns.SetAns">
+   <property name="answer">
+     <set>
+          <ref bean="question1"></ref>
+          <ref bean="question2"></ref>
+    </set>
+   </property>
+</bean>
+
+<!-- ==========================================MAP=========================================== -->
+
+<bean id="mapbean" class="com.spring.QueAns.MapAns">
+		<property name="answer">
+		<map>
+			<entry key="What is your name ?" value="Sai Krishna"></entry>
+			<entry key="What is your age ?" value="22"></entry>
+		</map> 
+		</property>
+	</bean>
+
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
