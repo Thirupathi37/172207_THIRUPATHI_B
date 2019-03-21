@@ -1,0 +1,32 @@
+<html>
+
+</html>
+<body>
+    <p id="demo" ></p>
+   <script>
+              
+    function getFact()
+    {
+        var num=document.getElementById("number").value;
+       document.getElementById("demo").innerHTML=get(num);
+           
+       function get(num)
+     {
+        if(num<1)
+        {
+            return 1;
+        }
+        else
+        {
+            return num*get(num-1);
+        }
+      }
+    }
+   
+    </script>
+    <form>
+        <input type="text"  id="number">
+        <br>
+        <input type="button" value="find Fact" onclick="getFact()">
+    </form>
+</body>
